@@ -1,0 +1,42 @@
+1. Используя команду cat в терминале операционной системы Linux, создать
+два файла Домашние животные (заполнив файл собаками, кошками,
+хомяками) и Вьючные животными заполнив файл Лошадьми, верблюдами и
+ослы), а затем объединить их. Просмотреть содержимое созданного файла.
+Переименовать файл, дав ему новое имя (Друзья человека).
+
+    cat > Home_animals
+        dogs
+        cats
+        hamsters
+
+    cat > Pack_animals
+        Horses
+        Camels
+        Donkeys
+
+    cat Home_animals Pack_animals > Combined
+
+    nano Combined
+
+    mv Combined Human_friends
+
+2. Создать директорию, переместить файл туда.
+
+    mkdir animals_directory
+
+    mv Human_friends ./animals_directory/
+
+3. Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория.
+
+    wget https://dev.mysql.com/get/mysql-apt-config_0.8.28-1_all.deb
+
+    sudo apt-get install mysql-server
+
+    sudo apt-get update
+
+4. Установить и удалить deb-пакет с помощью dpkg.
+
+    sudo dpkg -i steam.deb
+
+    sudo dpkg -r steam-launcher
