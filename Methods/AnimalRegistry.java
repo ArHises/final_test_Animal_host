@@ -63,7 +63,10 @@ public class AnimalRegistry {
     }
 
     private void viewAnimals() {
-        System.out.println(reController.toString());
+        if (reController.toString() != "")
+            System.out.println(reController.toString());
+        else
+            System.out.println("No Animals :(");
     }
 
     private void addAnimal() {
@@ -82,32 +85,32 @@ public class AnimalRegistry {
             case 1:
                 System.out.println("Enter Name: ");
                 animalName = scanner.nextLine();
-                reController.addAnimal(new Dog(LocalDateTime.now().toString(), animalName, null));
+                reController.addAnimal(new Dog(LocalDateTime.now().toString(), animalName));
                 break;
             case 2:
                 System.out.println("Enter Name: ");
                 animalName = scanner.nextLine();
-                reController.addAnimal(new Cat(LocalDateTime.now().toString(), animalName, null));
+                reController.addAnimal(new Cat(LocalDateTime.now().toString(), animalName));
                 break;
             case 3:
                 System.out.println("Enter Name: ");
                 animalName = scanner.nextLine();
-                reController.addAnimal(new Hamster(LocalDateTime.now().toString(), animalName, null));
+                reController.addAnimal(new Hamster(LocalDateTime.now().toString(), animalName));
                 break;
             case 4:
                 System.out.println("Enter Name: ");
                 animalName = scanner.nextLine();
-                reController.addAnimal(new Horse(LocalDateTime.now().toString(), animalName, null));
+                reController.addAnimal(new Horse(LocalDateTime.now().toString(), animalName));
                 break;
             case 5:
                 System.out.println("Enter Name: ");
                 animalName = scanner.nextLine();
-                reController.addAnimal(new Camel(LocalDateTime.now().toString(), animalName, null));
+                reController.addAnimal(new Camel(LocalDateTime.now().toString(), animalName));
                 break;
             case 6:
                 System.out.println("Enter Name: ");
                 animalName = scanner.nextLine();
-                reController.addAnimal(new Donkey(LocalDateTime.now().toString(), animalName, null));
+                reController.addAnimal(new Donkey(LocalDateTime.now().toString(), animalName));
                 break;
             default:
                 System.out.println("Error! Enter Animal Type:");
@@ -123,7 +126,7 @@ public class AnimalRegistry {
             if (reController.GetAnimals().containsKey(input)) {
                 System.out.println("Enter one of the commands:");
                 System.out.println("SIT, STAY, ROLL_OVER, FETCH");
-                String comm = scanner.nextLine();
+                String comm = scanner.nextLine().toUpperCase();
                 try {
                     reController.TrainCommand(input, Commands.valueOf(comm));
                 } catch (IllegalArgumentException e) {

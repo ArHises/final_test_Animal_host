@@ -7,8 +7,8 @@ import Methods.Commands;
 
 public class Camel extends BaggegeAnimals {
 
-    public Camel(String dateOfBirth, String name, List<Commands> commands) {
-        super(dateOfBirth, name, commands);
+    public Camel(String dateOfBirth, String name) {
+        super(dateOfBirth, name);
     }
 
     @Override

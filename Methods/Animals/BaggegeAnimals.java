@@ -8,8 +8,8 @@ import Methods.Commands;
 
 public abstract class BaggegeAnimals extends Animal {
 
-    public BaggegeAnimals(String dateOfBirth, String name, List<Commands> commands) {
-        super(dateOfBirth, name, commands);
+    public BaggegeAnimals(String dateOfBirth, String name) {
+        super(dateOfBirth, name);
     }
 
 }

@@ -8,8 +8,8 @@ import Methods.Commands;
 
 public abstract class DomesticAnimal extends Animal {
 
-    public DomesticAnimal(String dateOfBirth, String name, List<Commands> commands) {
-        super(dateOfBirth, name, commands);
+    public DomesticAnimal(String dateOfBirth, String name) {
+        super(dateOfBirth, name);
     }
 
 }

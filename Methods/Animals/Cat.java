@@ -7,8 +7,8 @@ import Methods.Commands;
 
 public class Cat extends DomesticAnimal {
 
-    public Cat(String dateOfBirth, String name, List<Commands> commands) {
-        super(dateOfBirth, name, commands);
+    public Cat(String dateOfBirth, String name) {
+        super(dateOfBirth, name);
     }
 
     @Override

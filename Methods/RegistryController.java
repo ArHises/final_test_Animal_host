@@ -30,7 +30,7 @@ public class RegistryController {
     }
 
     public void TrainCommand(int id, Commands command) {
-        this.registry.get(id).getCommands();
+        this.registry.get(id).AddCommands(command);
     }
 
     @Override
