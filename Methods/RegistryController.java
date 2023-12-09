@@ -4,15 +4,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.text.html.parser.Entity;
-
 public class RegistryController {
 
-    private static int animalCounter = 0;
+    private Counter counter;
     private Map<Integer, Animal> registry;
 
     public RegistryController() {
         this.registry = new HashMap<>();
+        this.counter = new Counter();
     }
 
     public Map<Integer, Animal> GetAnimals() {
@@ -20,8 +19,8 @@ public class RegistryController {
     }
 
     public void addAnimal(Animal animal) {
-        registry.put(this.animalCounter, animal);
-        this.animalCounter++;
+        registry.put(this.counter.getCount(), animal);
+        this.counter.Add();
         System.out.println("New Animal Added!");
     }
 
