@@ -1,10 +1,6 @@
 package Methods.Animals;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 import Methods.Animal;
-import Methods.Commands;
 
 public abstract class DomesticAnimal extends Animal {
 
