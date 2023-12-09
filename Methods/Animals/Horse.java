@@ -1,13 +1,14 @@
 package Methods.Animals;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import Methods.Commands;
 
 public class Horse extends BaggegeAnimals {
 
-    public Horse(int id, int number, LocalDateTime dateOfBirth, String name, Commands commands) {
-        super(id, number, dateOfBirth, name, commands);
+    public Horse(String dateOfBirth, String name, List<Commands> commands) {
+        super(dateOfBirth, name, commands);
     }
 
     @Override

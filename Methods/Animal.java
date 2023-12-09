@@ -1,18 +1,15 @@
 package Methods;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 // Abstract class Animal
 public abstract class Animal {
-    private int id;
-    private int number;
-    private LocalDateTime dateOfBirth;
+    private String dateOfBirth;
     private String name;
-    private Commands commands;
+    private List<Commands> commands;
 
-    public Animal(int id, int number, LocalDateTime dateOfBirth, String name, Commands commands) {
-        this.id = id;
-        this.number = number;
+    public Animal(String dateOfBirth, String name, List<Commands> commands) {
         this.dateOfBirth = dateOfBirth;
         this.name = name;
         this.commands = commands;
@@ -21,28 +18,8 @@ public abstract class Animal {
     // Abstract method to be implemented by subclasses
     public abstract void makeSound();
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public LocalDateTime getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
-    }
-
-    public void setDateOfBirth(LocalDateTime dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
     }
 
     public String getName() {
@@ -53,11 +30,23 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public Commands getCommands() {
+    public List<Commands> getCommands() {
         return commands;
     }
 
-    public void setCommands(Commands commands) {
-        this.commands = commands;
+    public void AddCommands(Commands command) {
+        this.commands.add(command);
+    }
+
+    @Override
+    public String toString() {
+        String listOfCommands = "No Commands";
+        if (commands != null)
+            listOfCommands = commands.toString();
+        return "{ "
+                + "Name: " + this.name + " "
+                + "B-Day" + this.dateOfBirth + " "
+                + "Commands: " + listOfCommands
+                + " }";
     }
 }

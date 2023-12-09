@@ -1,12 +1,14 @@
 package Methods.Animals;
 
 import java.time.LocalDateTime;
+import java.util.List;
+
 import Methods.Commands;
 
 public class Cat extends DomesticAnimal {
 
-    public Cat(int id, int number, LocalDateTime dateOfBirth, String name, Commands commands) {
-        super(id, number, dateOfBirth, name, commands);
+    public Cat(String dateOfBirth, String name, List<Commands> commands) {
+        super(dateOfBirth, name, commands);
     }
 
     @Override
